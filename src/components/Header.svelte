@@ -1,5 +1,11 @@
 <script>
   export let segment;
+
+  let showMobileNavigation = false;
+
+  function toggleMobileNavigation() {
+    showMobileNavigation = !showMobileNavigation;
+  }
 </script>
 
 <style>
@@ -91,7 +97,8 @@
       border-radius: 0 10px 0 0;
     }
   }
-  .main-nav ul li.show-mobile-menu {
+
+  .main-nav ul li.show {
     display: block;
   }
 
@@ -99,7 +106,12 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
+  }
+
+  @media (min-width: 52em) {
+    nav ul {
+      display: flex;
+    }
   }
 
   .brand-logo {
@@ -146,15 +158,23 @@
     <nav class="main-nav">
       <ul id="main-nav" class="menu">
         <li class="dropdown-icon">
-          <a href="javascript:void(0);">Menu ☰</a>
+          <a href="javascript:void(0);" on:click={toggleMobileNavigation}>
+            Menu ☰
+          </a>
         </li>
-        <li class:active={segment === 'unsere-wolle'}>
+        <li
+          class:active={segment === 'unsere-wolle'}
+          class:show={showMobileNavigation}>
           <a href="/unsere-wolle">Über unsere Wolle</a>
         </li>
-        <li class:active={segment === 'stricktreff-und-kurse'}>
+        <li
+          class:active={segment === 'stricktreff-und-kurse'}
+          class:show={showMobileNavigation}>
           <a href="/stricktreff-und-kurse">Strickkurse</a>
         </li>
-        <li class:active={segment === 'wissen'}>
+        <li
+          class:active={segment === 'wissen'}
+          class:show={showMobileNavigation}>
           <a href="/wissen">Wissenswertes</a>
         </li>
       </ul>
