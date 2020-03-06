@@ -1,0 +1,17 @@
+.footer-widgets > article {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-widgets article:not(:last-child) {
+  margin-right: 2em;
+}
+
+.footer-widgets > article h2 {
+  margin-bottom: 0.4em;
+  color: #d2615f;
+}
+
+.footer-widgets > article p {
+  margin: 0;
+}
