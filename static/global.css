@@ -39,6 +39,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Slab", serif;
+  font-weight: 400;
 }
 
 a {
@@ -48,4 +49,22 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+main article p,
+main article ul,
+main article ol {
+  font-size: 1.3em;
+}
+
+@media (min-width: 40em) {
+  main article p,
+  main article ul,
+  main article ol {
+    font-size: 1.125em;
+  }
+}
+
+.primary-color {
+  color: #d2615f;
 }

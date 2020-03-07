@@ -10,4 +10,9 @@
 </style>
 
 <Header {segment} />
+
+<main class="container">
+  <slot />
+</main>
+
 <Footer />
