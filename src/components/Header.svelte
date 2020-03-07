@@ -9,6 +9,16 @@
 </script>
 
 <style>
+  header {
+    margin-bottom: 2em;
+  }
+
+  @media (min-width: 52em) {
+    header {
+      margin-bottom: 0;
+    }
+  }
+
   .main-nav ul {
     background: #d2615f;
   }
@@ -129,55 +139,60 @@
     padding: 5px;
     color: grey;
   }
+
+  .brand-secondary-nav-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   @media (min-width: 40em) {
     .secondary-nav {
       display: block;
+    }
+    .brand-secondary-nav-wrapper {
+      justify-content: space-between;
     }
   }
 </style>
 
 <header class="container">
-  <div>
-    <div class="flex justify-between">
-      <a href="/">
-        <img class="brand-logo" alt="Garntante Logo" src="assets/logo.png" />
-      </a>
+  <div class="brand-secondary-nav-wrapper">
+    <a href="/">
+      <img class="brand-logo" alt="Garntante Logo" src="assets/logo.png" />
+    </a>
 
-      <nav class="secondary-nav">
-        <ul class="menu">
-          <li>
-            <a href="/impressum">Impressum</a>
-          </li>
-          <li>
-            <a href="/kontakt">Kontakt</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <nav class="main-nav">
-      <ul id="main-nav" class="menu">
-        <li class="dropdown-icon">
-          <a href="javascript:void(0);" on:click={toggleMobileNavigation}>
-            Menu ☰
-          </a>
+    <nav class="secondary-nav">
+      <ul class="menu">
+        <li>
+          <a href="/impressum">Impressum</a>
         </li>
-        <li
-          class:active={segment === 'unsere-wolle'}
-          class:show={showMobileNavigation}>
-          <a href="/unsere-wolle">Über unsere Wolle</a>
-        </li>
-        <li
-          class:active={segment === 'stricktreff-und-kurse'}
-          class:show={showMobileNavigation}>
-          <a href="/stricktreff-und-kurse">Strickkurse</a>
-        </li>
-        <li
-          class:active={segment === 'wissen'}
-          class:show={showMobileNavigation}>
-          <a href="/wissen">Wissenswertes</a>
+        <li>
+          <a href="/kontakt">Kontakt</a>
         </li>
       </ul>
     </nav>
   </div>
+
+  <nav class="main-nav">
+    <ul id="main-nav" class="menu">
+      <li class="dropdown-icon">
+        <a href="javascript:void(0);" on:click={toggleMobileNavigation}>
+          Menu ☰
+        </a>
+      </li>
+      <li
+        class:active={segment === 'unsere-wolle'}
+        class:show={showMobileNavigation}>
+        <a href="/unsere-wolle">Über unsere Wolle</a>
+      </li>
+      <li
+        class:active={segment === 'stricktreff-und-kurse'}
+        class:show={showMobileNavigation}>
+        <a href="/stricktreff-und-kurse">Strickkurse</a>
+      </li>
+      <li class:active={segment === 'wissen'} class:show={showMobileNavigation}>
+        <a href="/wissen">Wissenswertes</a>
+      </li>
+    </ul>
+  </nav>
 </header>
