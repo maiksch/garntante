@@ -33,7 +33,7 @@
       <a href="/stricktreff-und-kurse">Stricktreff und Kurse</a>
     </li>
     <li>
-      <a href="/unsere-wolle">Über unsere Wolle</a>
+      <a href="/wolle">Über unsere Wolle</a>
     </li>
     <li>
       <a href="/wissen">Wissenswertes</a>

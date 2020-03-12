@@ -1,6 +1,8 @@
 <script>
-  export let src;
+  export let page;
   export let title;
+
+  const src = `/assets/banner/${page}.jpg`;
 </script>
 
 <style>
@@ -25,14 +27,29 @@
     margin: 0;
   }
 
-  .header_img_page_title_front_page {
+  .header-image-title {
     position: absolute;
     width: 100%;
-    display: block;
-    bottom: 10%;
+    text-align: center;
+    bottom: 0;
   }
 
-  .header_img_page_title_front_page h1 {
+  .header-image-title.home {
+    bottom: 10%;
+    text-align: left;
+  }
+
+  .header-image-title h1 {
+    font-size: 2em;
+    max-width: none;
+    margin: 0;
+    color: white;
+    background: black;
+    background: rgba(210, 97, 95, 0.8);
+    padding: 10px 0;
+  }
+
+  .header-image-title.home h1 {
     font-size: 1.5em;
     max-width: 350px;
     margin: 0;
@@ -46,7 +63,7 @@
 <div class="flex xs-hide header-image-container">
   <div class="flex-auto">
     <img class="header-image" {src} alt={title} />
-    <div class="header_img_page_title_front_page">
+    <div class="header-image-title" class:home={page === 'home'}>
       <h1>{title}</h1>
     </div>
   </div>

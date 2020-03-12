@@ -79,9 +79,7 @@
   }
 </style>
 
-<Banner
-  src="/assets/banner-startseite.jpg"
-  title="Deine Wollgeschäfte in Hamburg" />
+<Banner page="home" title="Deine Wollgeschäfte in Hamburg" />
 
 <section class="qualities-container">
   <Qualitaet icon="diamond" title="Hohe Qualität">

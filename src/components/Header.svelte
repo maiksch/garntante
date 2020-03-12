@@ -3,6 +3,11 @@
 
   let showMobileNavigation = false;
 
+  $: {
+    segment;
+    showMobileNavigation = false;
+  }
+
   function toggleMobileNavigation() {
     showMobileNavigation = !showMobileNavigation;
   }
@@ -54,7 +59,8 @@
       display: none;
     }
   }
-  .main-nav ul li a {
+  .main-nav ul li a,
+  .main-nav ul li span {
     background-color: #d2615f;
     font-family: "Roboto Slab", serif;
     color: white;
@@ -64,7 +70,8 @@
     font-size: 0.9em;
   }
   @media (min-width: 52em) {
-    .main-nav ul li a {
+    .main-nav ul li a,
+    .main-nav ul li span {
       line-height: 25px;
     }
   }
@@ -176,14 +183,10 @@
   <nav class="main-nav">
     <ul id="main-nav" class="menu">
       <li class="dropdown-icon">
-        <a href="javascript:void(0);" on:click={toggleMobileNavigation}>
-          Menu ☰
-        </a>
+        <span on:click={toggleMobileNavigation}>Menu ☰</span>
       </li>
-      <li
-        class:active={segment === 'unsere-wolle'}
-        class:show={showMobileNavigation}>
-        <a href="/unsere-wolle">Über unsere Wolle</a>
+      <li class:active={segment === 'wolle'} class:show={showMobileNavigation}>
+        <a href="/wolle">Über unsere Wolle</a>
       </li>
       <li
         class:active={segment === 'stricktreff-und-kurse'}
