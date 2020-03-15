@@ -25,7 +25,7 @@
       <a href="/blog">Blog</a>
     </li>
     <li>
-      <a href="/datenschutzbelehrung">Datenschutzbelehrung</a>
+      <a href="/datenschutz">Datenschutzbelehrung</a>
     </li>
     <li>
       <a href="/impressum">Impressum</a>

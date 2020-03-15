@@ -27,11 +27,6 @@
       margin-block-start: 1.5em;
     }
   }
-
-  .content-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-  }
 </style>
 
 <Banner page="wolle" title="Über unsere Wolle" />

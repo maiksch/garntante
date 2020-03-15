@@ -1,4 +1,8 @@
 export default {
   wolle: "wolle",
-  strickkurse: "strickkurse"
+  strickkurse: "strickkurse",
+  kontakt: {
+    url: "/kontakt",
+    title: "Kontakt"
+  }
 };

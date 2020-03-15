@@ -1,11 +1,11 @@
 <script>
-  // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-  // import { faGem } from "@fortawesome/free-regular-svg-icons";
-
   import {
     mdiDiamondStone,
     mdiCommentAccountOutline,
-    mdiCoffeeOutline
+    mdiCoffeeOutline,
+    mdiEmailOutline,
+    mdiPhone,
+    mdiGoogleMaps
   } from "@mdi/js";
 
   export let icon;
@@ -14,7 +14,10 @@
   const dict = {
     diamond: mdiDiamondStone,
     comment: mdiCommentAccountOutline,
-    coffee: mdiCoffeeOutline
+    coffee: mdiCoffeeOutline,
+    email: mdiEmailOutline,
+    phone: mdiPhone,
+    maps: mdiGoogleMaps
   };
 
   const path = dict[icon];

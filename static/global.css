@@ -68,3 +68,8 @@ main article ol {
 .primary-color {
   color: #d2615f;
 }
+
+.content-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
