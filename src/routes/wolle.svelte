@@ -140,7 +140,7 @@
         Bei all dieser Auswahl von hochwertiger Wolle wirst du bestimmt fündig.
         Möchtest Du diese traumhaften Garne selbst in die Hand nehmen, komm
         einfach zu unseren Geschäftszeiten vorbei oder besuch uns bei unserem
-        <a href="/stricktreff-und-kurse">Stricktreff</a>
+        <a href="/strickkurse">Stricktreff</a>
         . Wir freuen uns auf dich.
       </p>
       <br />

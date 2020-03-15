@@ -1,4 +1,6 @@
 <script>
+  import routes from "../routes.js";
+
   export let segment;
 
   let showMobileNavigation = false;
@@ -185,13 +187,15 @@
       <li class="dropdown-icon">
         <span on:click={toggleMobileNavigation}>Menu ☰</span>
       </li>
-      <li class:active={segment === 'wolle'} class:show={showMobileNavigation}>
-        <a href="/wolle">Über unsere Wolle</a>
+      <li
+        class:active={segment === routes.wolle}
+        class:show={showMobileNavigation}>
+        <a href="/{routes.wolle}">Über unsere Wolle</a>
       </li>
       <li
-        class:active={segment === 'stricktreff-und-kurse'}
+        class:active={segment === routes.strickkurse}
         class:show={showMobileNavigation}>
-        <a href="/stricktreff-und-kurse">Strickkurse</a>
+        <a href="/{routes.strickkurse}">Strickkurse</a>
       </li>
       <li class:active={segment === 'wissen'} class:show={showMobileNavigation}>
         <a href="/wissen">Wissenswertes</a>

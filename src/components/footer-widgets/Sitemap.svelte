@@ -1,3 +1,7 @@
+<script>
+  import routes from "../../routes.js";
+</script>
+
 <style>
   article {
     display: none;
@@ -30,10 +34,10 @@
       <a href="/kontakt">Kontakt</a>
     </li>
     <li>
-      <a href="/stricktreff-und-kurse">Stricktreff und Kurse</a>
+      <a href="/{routes.strickkurse}">Stricktreff und Kurse</a>
     </li>
     <li>
-      <a href="/wolle">Über unsere Wolle</a>
+      <a href="/{routes.wolle}">Über unsere Wolle</a>
     </li>
     <li>
       <a href="/wissen">Wissenswertes</a>
