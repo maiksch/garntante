@@ -1,9 +1,11 @@
 <script>
   export let strickkurs;
+
+  const preis = strickkurs.preis ? `${strickkurs.preis}€` : "kostenlos";
 </script>
 
 <style>
-  article {
+  .strickkurs {
     height: 100%;
     border: 1px solid #eee;
     position: relative;
@@ -14,14 +16,15 @@
   }
 
   @media (min-width: 40em) {
-    article {
-      width: 48.27586%;
+    .strickkurs {
+      width: 48%;
     }
   }
 
   @media (min-width: 60em) {
-    article {
-      width: 31.03448%;
+    .strickkurs {
+      width: 31%;
+      margin-left: 3%;
     }
   }
 
@@ -70,16 +73,24 @@
   .content p:last-child {
     margin-bottom: 0;
   }
+
+  .content > p > span {
+    display: block;
+  }
 </style>
 
-<article>
+<article class="strickkurs">
   <section class="header">
     <b>{strickkurs.titel}</b>
   </section>
   <section class="image">
-    <img width="510" height="340" src={strickkurs.img} alt={strickkurs.title} />
+    <img
+      width="510"
+      height="340"
+      src={strickkurs.bild}
+      alt={strickkurs.titel} />
     <div class="price">
-      <span>{strickkurs.preis}</span>
+      <span>{preis}</span>
     </div>
   </section>
   <section>
@@ -87,18 +98,26 @@
       <p>{strickkurs.beschreibung}</p>
       <p>
         <strong>Dauer:</strong>
-        <br />
-        {strickkurs.dauer}
+        <span>{strickkurs.dauer}</span>
       </p>
-      <p>
-        <strong>Termine:</strong>
-        <br />
-        {strickkurs.termine}
-      </p>
+      {#if strickkurs.termine}
+        <p>
+          <strong>Termine:</strong>
+          <span>{strickkurs.termine}</span>
+        </p>
+      {/if}
       <p>
         <strong>Material:</strong>
-        <br />
-        {strickkurs.material}
+
+        {#if strickkurs.materialien.length === 1}
+          <span>{strickkurs.materialien[0]}</span>
+        {:else}
+          <ul>
+            {#each strickkurs.materialien as material}
+              <li>{material}</li>
+            {/each}
+          </ul>
+        {/if}
       </p>
     </div>
   </section>

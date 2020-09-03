@@ -1,5 +1,5 @@
 <script>
-  import routes from "../routes.js";
+  import routes from "routes";
 
   export let segment;
 
@@ -177,12 +177,7 @@
 
     <nav class="secondary-nav">
       <ul class="menu">
-        <li>
-          <a href="/impressum">Impressum</a>
-        </li>
-        <li>
-          <a href={routes.kontakt.url}>{routes.kontakt.title}</a>
-        </li>
+        <li><a href="/{routes.impressum.url}">Impressum</a></li>
       </ul>
     </nav>
   </div>
@@ -193,25 +188,20 @@
         <span on:click={toggleMobileNavigation}>Menu ☰</span>
       </li>
       <li
-        class:active={segment === routes.wolle}
+        class:active={segment === routes.wolle.url}
         class:show={showMobileNavigation}>
-        <a href="/{routes.wolle}">Über unsere Wolle</a>
+        <a href="/{routes.wolle.url}">{routes.wolle.title}</a>
       </li>
       <li
-        class:active={segment === routes.strickkurse}
+        class:active={segment === routes.strickkurse.url}
         class:show={showMobileNavigation}>
-        <a href="/{routes.strickkurse}">Strickkurse</a>
+        <a href="/{routes.strickkurse.url}">{routes.strickkurse.title}</a>
       </li>
-      <li class:active={segment === 'wissen'} class:show={showMobileNavigation}>
-        <a href="/wissen">Wissenswertes</a>
+      <li
+        class:active={segment === routes.kontakt.url}
+        class:show={showMobileNavigation}>
+        <a href="/{routes.kontakt.url}">{routes.kontakt.title}</a>
       </li>
-      {#if showMobileOnlyLinks}
-        <li
-          class:active={segment === 'wissen'}
-          class:show={showMobileNavigation}>
-          <a href={routes.kontakt.url}>{routes.kontakt.title}</a>
-        </li>
-      {/if}
     </ul>
   </nav>
 </header>

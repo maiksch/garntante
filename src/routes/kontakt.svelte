@@ -1,6 +1,8 @@
 <script>
   import Icon from "../components/Icon.svelte";
   import Banner from "../components/Banner.svelte";
+
+  import routes from "routes";
 </script>
 
 <style>
@@ -41,7 +43,7 @@
   }
 </style>
 
-<Banner page="kontakt" title="Kontakt" />
+<Banner route={routes.kontakt} />
 
 <section class="kontakt-wrapper flex flex-wrap">
   <article>
@@ -49,11 +51,9 @@
     <h1 class="h2 mt0 mx-auto">Schreib uns eine Mail</h1>
     <hr class="mx-auto short" />
     <p>
-      Gerne kannst du uns unter der Adresse
-      <a href="mailto:kontakt@garntante.de">kontakt@garntante.de</a>
-      eine E-Mail schicken.
-      <br />
-      Wir treten dann so schnell wie möglich mit dir in Kontakt.
+      Gerne kannst du uns unter der Adresse <a
+        href="mailto:kontakt@garntante.de">kontakt@garntante.de</a> eine E-Mail schicken.
+      <br /> Wir treten dann so schnell wie möglich mit dir in Kontakt.
     </p>
   </article>
   <article>
@@ -61,10 +61,8 @@
     <h1 class="h2 mt0 mx-auto">Ruf uns an</h1>
     <hr class="mx-auto short" />
     <p>
-      Wir sind unter
-      <a href="tel:+494052161312">(040) 52 16 1312</a>
-      zu unseren Geschäftszeiten zu erreichen. Ruf uns an und wir stehen dir
-      gern zur Verfügung.
+      Wir sind unter <a href="tel:+494052161312">(040) 52 16 1312</a> zu unseren
+      Geschäftszeiten zu erreichen. Ruf uns an und wir stehen dir gern zur Verfügung.
     </p>
   </article>
   <article>

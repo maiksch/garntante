@@ -1,7 +1,8 @@
 <script>
-  export let page;
-  export let title;
+  export let route;
 
+  const page = route.url;
+  const title = route.banner || route.title;
   const src = `/assets/banner/${page}.jpg`;
 </script>
 

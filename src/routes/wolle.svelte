@@ -1,5 +1,6 @@
 <script>
   import Banner from "../components/Banner.svelte";
+  import routes from "routes";
 </script>
 
 <style>
@@ -29,7 +30,7 @@
   }
 </style>
 
-<Banner page="wolle" title="Über unsere Wolle" />
+<Banner route={routes.wolle} />
 
 <div class="flex">
   <div class="content-wrapper flex-auto">
@@ -38,14 +39,12 @@
         Bei uns findest du traumhafte Garne und hochwertiges Strickzubehör für
         gemütliche Strickstunden. Auf dieser Seite erhältst du einen groben
         Überblick über die Wolle, die wir bei uns im Laden führen. Eine genaue
-        Auflistung aller Garne findest du unter unserem
-        <a
+        Auflistung aller Garne findest du unter unserem <a
           href="http://www.ravelry.com/shops/garntante/yarns"
           target="_blank"
           rel="me noopener noreferrer">
           Ravelry Eintrag
-        </a>
-        .
+        </a> .
       </p>
 
       <h1>Artyarns und The Fibre Co.</h1>
@@ -70,14 +69,12 @@
           alt="Oeko-Tex Standard 100" />
       </div>
       <p>
-        Mehr Informationen dazu findest Du
-        <a
+        Mehr Informationen dazu findest Du <a
           href="https://www.oeko-tex.com/de/business/certifications_and_services/ots_100/ots_100_start.xhtml"
           target="_blank"
           rel="noopener noreferrer">
           hier
-        </a>
-        .
+        </a> .
       </p>
 
       <h1>Rohrspatz und Wollmeise</h1>
@@ -112,14 +109,12 @@
       </div>
       <p>
         Von Baumwolle über Seide bis kuschelweiche Baby Alpaka bieten wir die BC
-        Garne aus Dänemark welche größtenteils nach
-        <a
+        Garne aus Dänemark welche größtenteils nach <a
           href="http://www.global-standard.org/de/"
           target="_blank"
           rel="noopener noreferrer">
           GOTS (Global Organic Textile Standard)
-        </a>
-        Richtlinien produziert werden.
+        </a> Richtlinien produziert werden.
       </p>
 
       <h1>Lang Yarns, Online und Lana Grossa</h1>
@@ -134,9 +129,8 @@
       <p>
         Bei all dieser Auswahl von hochwertiger Wolle wirst du bestimmt fündig.
         Möchtest Du diese traumhaften Garne selbst in die Hand nehmen, komm
-        einfach zu unseren Geschäftszeiten vorbei oder besuch uns bei unserem
-        <a href="/strickkurse">Stricktreff</a>
-        . Wir freuen uns auf dich.
+        einfach zu unseren Geschäftszeiten vorbei oder besuch uns bei unserem <a
+          href="/strickkurse">Stricktreff</a> . Wir freuen uns auf dich.
       </p>
       <br />
       <p>

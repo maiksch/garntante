@@ -1,8 +1,8 @@
 <script>
-  import Sitemap from "./footer-widgets/Sitemap";
-  import Kontakt from "./footer-widgets/Kontakt";
-  import Oeffnungszeiten from "./footer-widgets/Oeffnungszeiten";
-  import SozialeNetzwerke from "./footer-widgets/SozialeNetzwerke";
+  import Sitemap from "./footer-widgets/Sitemap.svelte";
+  import Kontakt from "./footer-widgets/Kontakt.svelte";
+  import Oeffnungszeiten from "./footer-widgets/Oeffnungszeiten.svelte";
+  import SozialeNetzwerke from "./footer-widgets/SozialeNetzwerke.svelte";
 
   let today = new Date();
   let currentYear = today.getFullYear();

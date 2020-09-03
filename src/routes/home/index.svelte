@@ -4,27 +4,29 @@
   import Qualitaet from "./Qualitaet.svelte";
   import Strickkurs from "./Strickkurs.svelte";
 
+  import routes from "routes";
+
   let strickkurse = [
     {
       src: "/assets/strickkurse/stricktreff.jpg",
-      title: "Stricktreff"
+      title: "Stricktreff",
     },
     {
       src: "/assets/strickkurse/einzelstunde.jpg",
-      title: "Einzelstunde"
+      title: "Einzelstunde",
     },
     {
       src: "/assets/strickkurse/anfaenger.jpg",
-      title: "Anfängerkurs: Stricken"
+      title: "Anfängerkurs: Stricken",
     },
     {
       src: "/assets/strickkurse/anfaenger-haekeln.jpg",
-      title: "Anfängerkurs: Häkeln"
+      title: "Anfängerkurs: Häkeln",
     },
     {
       src: "/assets/strickkurse/toe-up.jpg",
-      title: "Toe-up Sockenstrickkurs"
-    }
+      title: "Toe-up Sockenstrickkurs",
+    },
   ];
 </script>
 
@@ -79,21 +81,19 @@
   }
 </style>
 
-<Banner page="home" title="Deine Wollgeschäfte in Hamburg" />
+<Banner route={routes.home} />
 
 <section class="qualities-container">
   <Qualitaet icon="diamond" title="Hohe Qualität">
     Bei uns findest du traumhafte Garne und hochwertiges Strickzubehör. Unser
-    Angebot findest du
-    <a href="/unsere-wolle">hier</a>
-    auf der Website oder direkt bei uns im Laden.
+    Angebot findest du <a href={routes.wolle.url}>hier</a> auf der Website oder direkt
+    bei uns im Laden.
   </Qualitaet>
 
   <Qualitaet icon="comment" title="Gute Beratung">
     Wir lieben das Stricken und beraten dich gern bei all deinen Fragen. Besuche
-    uns dafür auf
-    <a href="https://www.facebook.com/Garntante/">Facebook</a>
-    oder komme einfach persönlich vorbei.
+    uns dafür auf <a href="https://www.facebook.com/Garntante/">Facebook</a> oder
+    komme einfach persönlich vorbei.
   </Qualitaet>
 
   <Qualitaet icon="coffee" title="Hier Wohlfühlen">
@@ -104,9 +104,7 @@
 
 <section>
   <div class="frontpage-heading center hreset">
-    <h1 class="hreset">
-      <span>Gemeinsam Stricken</span>
-    </h1>
+    <h1 class="hreset"><span>Gemeinsam Stricken</span></h1>
   </div>
 
   <div class="frontpage-events-container">
