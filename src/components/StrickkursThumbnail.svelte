@@ -4,10 +4,6 @@
 </script>
 
 <style>
-  .frontpage-event {
-    width: auto;
-  }
-
   article {
     position: relative;
   }
@@ -27,30 +23,27 @@
     padding: 0 10px 5px 10px;
   }
 
+  .frontpage-event {
+    width: auto;
+  }
+
   @media (min-width: 52em) {
     .frontpage-event {
-      width: 50%;
-      float: left;
-      padding-left: 0.46296%;
-      padding-right: 0.46296%;
+      width: 49%;
     }
   }
 
   @media (min-width: 64em) {
     .frontpage-event {
-      width: 33.33333%;
-      float: left;
-      padding-left: 0.46296%;
-      padding-right: 0.46296%;
+      width: 31.33333%;
+      margin-left: 2%;
     }
   }
 </style>
 
-<div class="frontpage-event">
-  <article>
-    <a href="/strickkurse">
-      <img {src} alt={title} />
-      <div class="title"><b>{title}</b></div>
-    </a>
-  </article>
-</div>
+<article class="frontpage-event">
+  <a href="/strickkurse">
+    <img {src} alt={title} />
+    <div class="title"><b>{title}</b></div>
+  </a>
+</article>
