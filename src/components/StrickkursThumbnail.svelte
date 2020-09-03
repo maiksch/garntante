@@ -3,7 +3,7 @@
   export let title = "";
 </script>
 
-<style lang="scss">
+<style>
   .frontpage-event {
     width: auto;
   }
@@ -50,9 +50,7 @@
   <article>
     <a href="/strickkurse">
       <img {src} alt={title} />
-      <div class="title">
-        <b>{title}</b>
-      </div>
+      <div class="title"><b>{title}</b></div>
     </a>
   </article>
 </div>

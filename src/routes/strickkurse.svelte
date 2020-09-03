@@ -9,8 +9,8 @@
 </script>
 
 <script>
-  import Banner from "../../components/Banner.svelte";
-  import Strickkurs from "./Strickkurs.svelte";
+  import Banner from "../components/Banner.svelte";
+  import Strickkurs from "../components/Strickkurs.svelte";
 
   import routes from "routes";
 </script>
