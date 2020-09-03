@@ -16,16 +16,21 @@
 </script>
 
 <style>
-  .product_table {
+  .strickkurse {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+  }
+
+  @media (min-width: 40em) {
+    .strickkurse {
+      justify-content: space-between;
+    }
   }
 
   @media (min-width: 60em) {
-    .product_table {
-      margin-right: -1%;
-      margin-left: -1%;
+    .strickkurse {
+      margin-left: -3.33333%;
+      justify-content: flex-start;
     }
   }
 
@@ -50,7 +55,7 @@
           Termin</strong> für dich.
       </p>
     </div>
-    <div class="product_table">
+    <div class="strickkurse">
       {#each strickkurse as strickkurs}
         <Strickkurs {strickkurs} />
       {/each}

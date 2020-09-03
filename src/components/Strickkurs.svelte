@@ -17,14 +17,14 @@
 
   @media (min-width: 40em) {
     .strickkurs {
-      width: 48%;
+      width: 49%;
     }
   }
 
   @media (min-width: 60em) {
     .strickkurs {
-      width: 31%;
-      margin-left: 3%;
+      width: 30%;
+      margin-left: 3.33333%;
     }
   }
 
@@ -80,31 +80,21 @@
 </style>
 
 <article class="strickkurs">
-  <section class="header">
-    <b>{strickkurs.titel}</b>
-  </section>
+  <section class="header"><b>{strickkurs.titel}</b></section>
   <section class="image">
     <img
       width="510"
       height="340"
       src={strickkurs.bild}
       alt={strickkurs.titel} />
-    <div class="price">
-      <span>{preis}</span>
-    </div>
+    <div class="price"><span>{preis}</span></div>
   </section>
   <section>
     <div class="content">
       <p>{strickkurs.beschreibung}</p>
-      <p>
-        <strong>Dauer:</strong>
-        <span>{strickkurs.dauer}</span>
-      </p>
+      <p><strong>Dauer:</strong> <span>{strickkurs.dauer}</span></p>
       {#if strickkurs.termine}
-        <p>
-          <strong>Termine:</strong>
-          <span>{strickkurs.termine}</span>
-        </p>
+        <p><strong>Termine:</strong> <span>{strickkurs.termine}</span></p>
       {/if}
       <p>
         <strong>Material:</strong>
