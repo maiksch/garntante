@@ -5,7 +5,9 @@
     mdiCoffeeOutline,
     mdiEmailOutline,
     mdiPhone,
-    mdiGoogleMaps
+    mdiGoogleMaps,
+    mdiCartOutline,
+    mdiClose,
   } from "@mdi/js";
 
   export let icon;
@@ -17,12 +19,20 @@
     coffee: mdiCoffeeOutline,
     email: mdiEmailOutline,
     phone: mdiPhone,
-    maps: mdiGoogleMaps
+    maps: mdiGoogleMaps,
+    shop: mdiCartOutline,
+    close: mdiClose,
   };
 
   const path = dict[icon];
   const fontSize = size * 24;
 </script>
+
+{#if path}
+  <svg viewBox="0 0 24 24" style="font-size: {fontSize}px">
+    <path d={path} />
+  </svg>
+{/if}
 
 <style>
   svg {
@@ -34,9 +44,3 @@
     vertical-align: -0.125em;
   }
 </style>
-
-{#if path}
-  <svg viewBox="0 0 24 24" style="font-size: {fontSize}px">
-    <path d={path} />
-  </svg>
-{/if}

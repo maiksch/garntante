@@ -52,17 +52,8 @@ a:hover {
 }
 
 main article p,
-main article ul,
 main article ol {
   font-size: 1.3em;
-}
-
-@media (min-width: 40em) {
-  main article p,
-  main article ul,
-  main article ol {
-    font-size: 1.125em;
-  }
 }
 
 .primary-color {

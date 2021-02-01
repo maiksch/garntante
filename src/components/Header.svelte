@@ -1,5 +1,6 @@
 <script>
   import routes from "routes";
+  import Icon from "./Icon.svelte";
 
   export let segment;
 
@@ -20,6 +21,53 @@
     showMobileNavigation = !showMobileNavigation;
   }
 </script>
+
+<svelte:window bind:outerWidth={windowWidth} />
+
+<header class="container">
+  <div class="brand-secondary-nav-wrapper">
+    <a href="/">
+      <img class="brand-logo" alt="Garntante Logo" src="assets/logo.png" />
+    </a>
+
+    <nav class="secondary-nav">
+      <ul class="menu">
+        <li><a href="/{routes.impressum.url}">Impressum</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <nav class="main-nav">
+    <ul id="main-nav" class="menu">
+      <li class="dropdown-icon">
+        <span on:click={toggleMobileNavigation}>Menu ☰</span>
+      </li>
+      <li
+        class:active={segment === routes.wolle.url}
+        class:show={showMobileNavigation}
+      >
+        <a href="/{routes.wolle.url}">{routes.wolle.title}</a>
+      </li>
+      <li class:show={showMobileNavigation}>
+        <a href="https://garntante.gambiocloud.com/" target="_blank">
+          <Icon icon="shop" /> Shop
+        </a>
+      </li>
+      <li
+        class:active={segment === routes.strickkurse.url}
+        class:show={showMobileNavigation}
+      >
+        <a href="/{routes.strickkurse.url}">{routes.strickkurse.title}</a>
+      </li>
+      <li
+        class:active={segment === routes.kontakt.url}
+        class:show={showMobileNavigation}
+      >
+        <a href="/{routes.kontakt.url}">{routes.kontakt.title}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <style>
   header {
@@ -44,6 +92,9 @@
     display: block;
     padding: 10px;
     font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-nav ul li a:hover {
@@ -166,42 +217,3 @@
     }
   }
 </style>
-
-<svelte:window bind:outerWidth={windowWidth} />
-
-<header class="container">
-  <div class="brand-secondary-nav-wrapper">
-    <a href="/">
-      <img class="brand-logo" alt="Garntante Logo" src="assets/logo.png" />
-    </a>
-
-    <nav class="secondary-nav">
-      <ul class="menu">
-        <li><a href="/{routes.impressum.url}">Impressum</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <nav class="main-nav">
-    <ul id="main-nav" class="menu">
-      <li class="dropdown-icon">
-        <span on:click={toggleMobileNavigation}>Menu ☰</span>
-      </li>
-      <li
-        class:active={segment === routes.wolle.url}
-        class:show={showMobileNavigation}>
-        <a href="/{routes.wolle.url}">{routes.wolle.title}</a>
-      </li>
-      <li
-        class:active={segment === routes.strickkurse.url}
-        class:show={showMobileNavigation}>
-        <a href="/{routes.strickkurse.url}">{routes.strickkurse.title}</a>
-      </li>
-      <li
-        class:active={segment === routes.kontakt.url}
-        class:show={showMobileNavigation}>
-        <a href="/{routes.kontakt.url}">{routes.kontakt.title}</a>
-      </li>
-    </ul>
-  </nav>
-</header>
