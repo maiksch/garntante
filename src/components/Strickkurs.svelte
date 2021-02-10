@@ -4,6 +4,51 @@
   const preis = strickkurs.preis ? `${strickkurs.preis}€` : "kostenlos";
 </script>
 
+<article class="strickkurs">
+  <section class="header"><b>{strickkurs.titel}</b></section>
+  <section class="image">
+    <img
+      width="510"
+      height="340"
+      src={strickkurs.bild}
+      alt={strickkurs.titel}
+    />
+    <div class="price"><span>{preis}</span></div>
+  </section>
+  <section>
+    <div class="content">
+      <p>{strickkurs.beschreibung}</p>
+      <p><strong>Dauer:</strong> <span>{strickkurs.dauer}</span></p>
+      {#if strickkurs.termine}
+        <p><strong>Termine:</strong> <span>{strickkurs.termine}</span></p>
+      {/if}
+      <p>
+        <strong>Material:</strong>
+
+        {#if strickkurs.materialien.length === 1}
+          <span>{strickkurs.materialien[0]}</span>
+        {:else}
+          <ul>
+            {#each strickkurs.materialien as material}
+              <li>{material}</li>
+            {/each}
+          </ul>
+        {/if}
+      </p>
+      {#if strickkurs.buchenLink}
+        <p>
+          <a
+            class="buchen-link"
+            href={strickkurs.buchenLink}
+            target="_blank"
+            rel="noopener noreferrer">Jetzt Termin buchen</a
+          >
+        </p>
+      {/if}
+    </div>
+  </section>
+</article>
+
 <style>
   .strickkurs {
     height: 100%;
@@ -26,6 +71,10 @@
       width: 30%;
       margin-left: 3.33333%;
     }
+  }
+
+  .buchen-link {
+    font-weight: bold;
   }
 
   .header {
@@ -78,37 +127,3 @@
     display: block;
   }
 </style>
-
-<article class="strickkurs">
-  <section class="header"><b>{strickkurs.titel}</b></section>
-  <section class="image">
-    <img
-      width="510"
-      height="340"
-      src={strickkurs.bild}
-      alt={strickkurs.titel} />
-    <div class="price"><span>{preis}</span></div>
-  </section>
-  <section>
-    <div class="content">
-      <p>{strickkurs.beschreibung}</p>
-      <p><strong>Dauer:</strong> <span>{strickkurs.dauer}</span></p>
-      {#if strickkurs.termine}
-        <p><strong>Termine:</strong> <span>{strickkurs.termine}</span></p>
-      {/if}
-      <p>
-        <strong>Material:</strong>
-
-        {#if strickkurs.materialien.length === 1}
-          <span>{strickkurs.materialien[0]}</span>
-        {:else}
-          <ul>
-            {#each strickkurs.materialien as material}
-              <li>{material}</li>
-            {/each}
-          </ul>
-        {/if}
-      </p>
-    </div>
-  </section>
-</article>
