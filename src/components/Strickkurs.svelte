@@ -41,7 +41,7 @@
             class="buchen-link"
             href={strickkurs.buchenLink}
             target="_blank"
-            rel="noopener noreferrer">Jetzt Termin buchen</a
+            rel="noopener">Jetzt Termin buchen</a
           >
         </p>
       {/if}

@@ -49,7 +49,7 @@
         <a href="/{routes.wolle.url}">{routes.wolle.title}</a>
       </li>
       <li class:show={showMobileNavigation}>
-        <a href="https://garntante.gambiocloud.com/" target="_blank">
+        <a href="https://shop.garntante.de/" target="_blank" rel="noopener">
           <Icon icon="shop" /> Shop
         </a>
       </li>
