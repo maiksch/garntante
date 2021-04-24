@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	export let status;
 	export let error;
 
@@ -37,4 +37,4 @@
 
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>
-{/if}
+{/if} -->

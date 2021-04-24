@@ -8,6 +8,19 @@
   let currentYear = today.getFullYear();
 </script>
 
+<footer>
+  <div class="container footer-widgets">
+    <Sitemap />
+    <Kontakt />
+    <Oeffnungszeiten />
+    <SozialeNetzwerke />
+  </div>
+
+  <div class="copyright">
+    <span>Garntante © {currentYear}</span>
+  </div>
+</footer>
+
 <style>
   footer {
     margin-top: 3em;
@@ -28,16 +41,3 @@
     justify-content: space-between;
   }
 </style>
-
-<footer>
-  <div class="container footer-widgets">
-    <Sitemap />
-    <Kontakt />
-    <Oeffnungszeiten />
-    <SozialeNetzwerke />
-  </div>
-
-  <div class="copyright">
-    <span>Garntante © {currentYear}</span>
-  </div>
-</footer>

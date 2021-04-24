@@ -6,6 +6,15 @@
   const src = `/assets/banner/${page}.jpg`;
 </script>
 
+<div class="flex xs-hide header-image-container">
+  <div class="flex-auto">
+    <img class="header-image" {src} alt={title} />
+    <div class="header-image-title" class:home={page === "home"}>
+      <h1>{title}</h1>
+    </div>
+  </div>
+</div>
+
 <style>
   .header-image-container {
     display: none;
@@ -60,12 +69,3 @@
     padding: 10px 20px;
   }
 </style>
-
-<div class="flex xs-hide header-image-container">
-  <div class="flex-auto">
-    <img class="header-image" {src} alt={title} />
-    <div class="header-image-title" class:home={page === 'home'}>
-      <h1>{title}</h1>
-    </div>
-  </div>
-</div>

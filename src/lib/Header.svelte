@@ -1,5 +1,5 @@
 <script>
-  import routes from "routes";
+  import routes from "$lib/routes";
   import Icon from "./Icon.svelte";
 
   export let segment;

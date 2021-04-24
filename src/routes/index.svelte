@@ -1,19 +1,22 @@
 <script context="module">
-  import { getStrickkurse } from "contentful";
+  import { getStrickkurse } from "$lib/contentful";
 
-  let strickkurse = [];
-
-  export async function preload() {
-    strickkurse = await getStrickkurse();
+  export async function load({ fetch }) {
+    return {
+      props: {
+        strickkurse: await getStrickkurse(fetch),
+      },
+    };
   }
 </script>
 
 <script>
-  import Banner from "../components/Banner.svelte";
-  import Qualitaet from "../components/Qualitaet.svelte";
-  import StrickkursThumbnail from "../components/StrickkursThumbnail.svelte";
+  import Banner from "$lib/Banner.svelte";
+  import Qualitaet from "$lib/Qualitaet.svelte";
+  import StrickkursThumbnail from "$lib/StrickkursThumbnail.svelte";
+  import routes from "$lib/routes";
 
-  import routes from "routes";
+  export let strickkurse = [];
 </script>
 
 <Banner route={routes.home} />

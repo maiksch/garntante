@@ -1,18 +1,19 @@
 <script>
   import Icon from "./Icon.svelte";
-  import { createContact } from "sendinblue";
+  import { createContact } from "$lib/sendinblue";
+  import { onMount } from "svelte";
 
   const HIDE_NEWSLETTER_POPUP_KEY = "hide-newsletter-popup";
 
   let show = false;
   let email = "";
 
-  if (process.browser) {
+  onMount(() => {
     const hideNewsletterPopup = localStorage.getItem(HIDE_NEWSLETTER_POPUP_KEY);
     if (!hideNewsletterPopup) {
       setTimeout(() => (show = true), 1);
     }
-  }
+  });
 
   function close() {
     show = false;
@@ -20,9 +21,7 @@
 
   function submit() {
     close();
-    if (process.browser) {
-      // localStorage.setItem(HIDE_NEWSLETTER_POPUP_KEY, true);
-    }
+    localStorage.setItem(HIDE_NEWSLETTER_POPUP_KEY, true);
     createContact(email);
   }
 </script>

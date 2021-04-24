@@ -4,9 +4,9 @@ export default {
   strickkurse: {
     url: "strickkurse",
     title: "Strickkurse",
-    banner: "Stricktreff und Kurse"
+    banner: "Stricktreff und Kurse",
   },
   kontakt: { url: "kontakt", title: "Kontakt" },
   datenschutz: { url: "datenschutz", title: "Datenschutzbelehrung" },
-  impressum: { url: "impressum", title: "Impressum" }
+  impressum: { url: "impressum", title: "Impressum" },
 };

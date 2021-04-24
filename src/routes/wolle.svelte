@@ -1,6 +1,6 @@
 <script>
-  import Banner from "../components/Banner.svelte";
-  import routes from "routes";
+  import Banner from "$lib/Banner.svelte";
+  import routes from "$lib/routes";
 </script>
 
 <Banner route={routes.wolle} />

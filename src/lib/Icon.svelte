@@ -1,27 +1,18 @@
 <script>
-  import {
-    mdiDiamondStone,
-    mdiCommentAccountOutline,
-    mdiCoffeeOutline,
-    mdiEmailOutline,
-    mdiPhone,
-    mdiGoogleMaps,
-    mdiCartOutline,
-    mdiClose,
-  } from "@mdi/js";
+  import * as mdi from "@mdi/js";
 
   export let icon;
   export let size = 1;
 
   const dict = {
-    diamond: mdiDiamondStone,
-    comment: mdiCommentAccountOutline,
-    coffee: mdiCoffeeOutline,
-    email: mdiEmailOutline,
-    phone: mdiPhone,
-    maps: mdiGoogleMaps,
-    shop: mdiCartOutline,
-    close: mdiClose,
+    diamond: mdi.mdiDiamondStone,
+    comment: mdi.mdiCommentAccountOutline,
+    coffee: mdi.mdiCoffeeOutline,
+    email: mdi.mdiEmailOutline,
+    phone: mdi.mdiPhone,
+    maps: mdi.mdiGoogleMaps,
+    shop: mdi.mdiCartOutline,
+    close: mdi.mdiClose,
   };
 
   const path = dict[icon];

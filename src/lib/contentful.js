@@ -4,9 +4,7 @@ const SPACE = "kfq4u4erlijk";
 
 let entries;
 
-const fetch = process.browser ? window.fetch : require("node-fetch").default;
-
-export async function getStrickkurse() {
+export async function getStrickkurse(fetch) {
   const contentType = "strickkurs";
   const url = `${DOMAIN}/spaces/${SPACE}/environments/master/entries?content_type=${contentType}&order=fields.sortierung`;
 
@@ -30,7 +28,7 @@ function toStrickkurs(data) {
     termine: data.fields.termine,
     materialien: data.fields.materialien,
     preis: data.fields.preis,
-    bild: getBild(data.fields.bild).fields.file.url,
+    bild: `https:${getBild(data.fields.bild).fields.file.url}`,
     buchenLink: data.fields.buchenLink,
   };
 }

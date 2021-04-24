@@ -7,6 +7,19 @@
   const [first, second] = title.split(" ");
 </script>
 
+<article class="center frontpage-quality">
+  <Icon {icon} size="2" />
+  <h2 class="h1 mt0 mx-auto">
+    <span>{first}</span>
+    <span class="primary-color">{second}</span>
+  </h2>
+  <hr class="mx-auto" />
+
+  <p>
+    <slot />
+  </p>
+</article>
+
 <style>
   hr {
     width: 5em;
@@ -20,16 +33,3 @@
     }
   }
 </style>
-
-<article class="center frontpage-quality">
-  <Icon {icon} size="2" />
-  <h2 class="h1 mt0 mx-auto">
-    <span>{first}</span>
-    <span class="primary-color">{second}</span>
-  </h2>
-  <hr class="mx-auto" />
-
-  <p>
-    <slot />
-  </p>
-</article>

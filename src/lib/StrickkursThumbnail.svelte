@@ -3,6 +3,13 @@
   export let title = "";
 </script>
 
+<article class="frontpage-event">
+  <a href="/strickkurse">
+    <img {src} alt={title} />
+    <div class="title"><b>{title}</b></div>
+  </a>
+</article>
+
 <style>
   article {
     position: relative;
@@ -40,10 +47,3 @@
     }
   }
 </style>
-
-<article class="frontpage-event">
-  <a href="/strickkurse">
-    <img {src} alt={title} />
-    <div class="title"><b>{title}</b></div>
-  </a>
-</article>
