@@ -1,10 +1,11 @@
 <script context="module">
-  import { getStrickkurse } from "$lib/contentful";
-
   export async function load({ fetch }) {
+    const response = await fetch("/strickkurse.json");
+    const strickkurse = await response.json();
+
     return {
       props: {
-        strickkurse: await getStrickkurse(fetch),
+        strickkurse,
       },
     };
   }

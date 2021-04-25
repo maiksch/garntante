@@ -8,3 +8,4 @@ build
 functions
 .svelte
 .idea
+.env

@@ -7,3 +7,4 @@ Die Website vom Wollfachgeschäft Garntante (https://garntante.de) aus Hamburg, 
 - [Svelte](https://github.com/sveltejs/svelte)
 - [SvelteKit](https://github.com/sveltejs/kit)
 - Contentful
+- Netlify

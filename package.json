@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build --verbose",
-    "start": "node build",
-    "preview": "svelte-kit preview"
+    "preview": "svelte-kit preview",
+    "start": "node build"
   },
   "devDependencies": {
     "@mdi/js": "^4.9.95",

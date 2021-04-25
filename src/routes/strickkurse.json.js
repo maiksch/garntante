@@ -1,10 +1,11 @@
-const ACCESS_TOKEN = "kETy1huwM2ihWWStvei_GyfEfZInqypqMgerW6CQjDg";
+const ACCESS_TOKEN = import.meta.env.VITE_CONTENTFUL_TOKEN;
+const SPACE = import.meta.env.VITE_CONTENTFUL_SPACE;
 const DOMAIN = "https://cdn.contentful.com";
-const SPACE = "kfq4u4erlijk";
 
-let entries;
-
-export async function getStrickkurse(fetch) {
+/**
+ * @type {import('@sveltejs/kit').RequestHandler}
+ */
+export async function get() {
   const contentType = "strickkurs";
   const url = `${DOMAIN}/spaces/${SPACE}/environments/master/entries?content_type=${contentType}&order=fields.sortierung`;
 
@@ -15,12 +16,19 @@ export async function getStrickkurse(fetch) {
     method: "GET",
   });
 
-  entries = await response.json();
+  const entries = await response.json();
+  const includes = entries.includes.Asset;
+  const body = entries.items.map((entry) => toStrickkurs(entry, includes));
 
-  return entries.items.map((entry) => toStrickkurs(entry));
+  if (body) {
+    return {
+      status: 200,
+      body,
+    };
+  }
 }
 
-function toStrickkurs(data) {
+function toStrickkurs(data, includes) {
   return {
     titel: data.fields.titel,
     beschreibung: data.fields.beschreibung,
@@ -28,12 +36,11 @@ function toStrickkurs(data) {
     termine: data.fields.termine,
     materialien: data.fields.materialien,
     preis: data.fields.preis,
-    bild: `https:${getBild(data.fields.bild).fields.file.url}`,
+    bild: `https:${getBild(data.fields.bild, includes).fields.file.url}`,
     buchenLink: data.fields.buchenLink,
   };
 }
 
-function getBild(asset) {
-  const includes = entries.includes.Asset;
+function getBild(asset, includes) {
   return includes.find((include) => include.sys.id === asset.sys.id);
 }
