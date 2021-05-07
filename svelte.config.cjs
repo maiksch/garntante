@@ -1,7 +1,7 @@
-const netlify = require("@sveltejs/adapter-netlify");
+const static = require("@sveltejs/adapter-static");
 
 module.exports = {
   kit: {
-    adapter: netlify(),
+    adapter: static(),
   },
 };

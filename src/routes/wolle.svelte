@@ -11,14 +11,7 @@
       <p>
         Bei uns findest du traumhafte Garne und hochwertiges Strickzubehör für
         gemütliche Strickstunden. Auf dieser Seite erhältst du einen groben
-        Überblick über die Wolle, die wir bei uns im Laden führen. Eine genaue
-        Auflistung aller Garne findest du unter unserem <a
-          href="http://www.ravelry.com/shops/garntante/yarns"
-          target="_blank"
-          rel="me noopener"
-        >
-          Ravelry Eintrag
-        </a> .
+        Überblick über die Wolle, die wir bei uns im Laden führen.
       </p>
 
       <h1>Artyarns und The Fibre Co.</h1>
