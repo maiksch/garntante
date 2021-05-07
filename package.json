@@ -6,7 +6,8 @@
     "dev": "svelte-kit dev",
     "build": "svelte-kit build --verbose",
     "preview": "svelte-kit preview",
-    "start": "node build"
+    "start": "node build",
+    "deploy": "npm run build && @powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./scripts/deploy.ps1"
   },
   "devDependencies": {
     "@mdi/js": "^4.9.95",
