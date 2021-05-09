@@ -14,3 +14,7 @@ AddOutputFilterByType DEFLATE application/x-javascript
 <filesMatch ".(css|jpg|jpeg|png|gif|js|ico|otf|webp)$">
 	Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} != 443
+RewriteRule ^(.*)$ https://garntante.de/$1 [R=301,L]
