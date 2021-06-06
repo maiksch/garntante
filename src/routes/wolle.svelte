@@ -1,5 +1,6 @@
 <script>
   import Banner from "$lib/Banner.svelte";
+  import NewsletterForm from "$lib/NewsletterForm.svelte";
   import routes from "$lib/routes";
 </script>
 
@@ -42,6 +43,10 @@
           hier
         </a> .
       </p>
+
+      <section class="mt3">
+        <NewsletterForm withHeader={true} />
+      </section>
 
       <h1>Rohrspatz und Wollmeise</h1>
       <p>

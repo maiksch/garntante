@@ -8,6 +8,7 @@ yarn-error.log
 build
 functions
 .svelte
+.svelte-kit
 .idea
 .env
 scripts

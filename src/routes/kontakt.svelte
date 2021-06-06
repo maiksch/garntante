@@ -1,6 +1,7 @@
 <script>
   import Icon from "$lib/Icon.svelte";
   import Banner from "$lib/Banner.svelte";
+  import NewsletterForm from "$lib/NewsletterForm.svelte";
   import routes from "$lib/routes";
 </script>
 
@@ -49,6 +50,10 @@
     frameborder="0"
     allowfullscreen="allowfullscreen"
   />
+</section>
+
+<section class="mt3">
+  <NewsletterForm withHeader={true} />
 </section>
 
 <style>

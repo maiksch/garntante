@@ -14,6 +14,7 @@
 <script>
   import Banner from "$lib/Banner.svelte";
   import Qualitaet from "$lib/Qualitaet.svelte";
+  import NewsletterForm from "$lib/NewsletterForm.svelte";
   import StrickkursThumbnail from "$lib/StrickkursThumbnail.svelte";
   import routes from "$lib/routes";
 
@@ -53,6 +54,13 @@
         <StrickkursThumbnail src={strickkurs.bild} title={strickkurs.titel} />
       {/each}
     </div>
+  </section>
+
+  <section>
+    <div class="frontpage-heading center hreset">
+      <h1 class="hreset"><span>Unser Newsletter</span></h1>
+    </div>
+    <NewsletterForm />
   </section>
 </div>
 
