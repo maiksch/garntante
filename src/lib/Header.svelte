@@ -27,7 +27,7 @@
 <header class="container">
   <div class="brand-secondary-nav-wrapper">
     <a href="/">
-      <img class="brand-logo" alt="Garntante Logo" src="assets/logo.png" />
+      <img class="brand-logo" alt="Garntante Logo" src="/assets/logo.png" />
     </a>
 
     <nav class="secondary-nav">
